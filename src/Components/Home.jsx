@@ -1,5 +1,6 @@
 import React from "react";
 import vaibhav from "../assets/img/vaibhav.png";
+import cv from '../../public/My_cv.pdf'
 
 const Home = () => {
   return (
@@ -24,9 +25,14 @@ const Home = () => {
           <button className="px-4 py-2 mt-4 rounded-lg bg-yellow-300 hover:bg-yellow-400 text-sm md:text-sm font-semibold">
             Hire Me!
           </button>
-          <button className="px-4 py-1 mt-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-black text-sm md:text-lg font-semibold">
-            Download CV
-          </button>
+          <a
+              href={cv} 
+              download="My_cv.pdf" 
+            >
+              <button className="px-4 py-1 mt-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-black text-sm md:text-lg font-semibold">
+                Download CV
+              </button>
+            </a>
         </div>
       </div>
 
