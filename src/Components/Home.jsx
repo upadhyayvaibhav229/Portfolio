@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section id="home">
 
-    <div className="container text- dark:text-white dark:bg-slate-900 max-w-5xl flex flex-wrap justify-around items-center md:min-h-screen pb-10 py-5 mt-11">
+    <div className="container dark:text-white dark:bg-slate-900 max-w-full flex flex-wrap justify-around items-center md:min-h-screen pb-10 py-5 mt-11 ">
       <div className="p-2 pt-5 ml-4">
         <h1 className=" text-xl md:text-xl font-bold leading-6">
           Hello, I'm
