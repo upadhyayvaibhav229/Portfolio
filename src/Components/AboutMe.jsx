@@ -6,11 +6,11 @@ const AboutMe = () => {
   const EducationCard = ({ year, title, location }) => (
     <div className="flex flex-col bg-slate-700 p-4 rounded-lg w-80">
       <div className="flex items-center">
-        <img className="w-8" src={Tick} alt="Tick Icon" />
-        <p className="text-white text-xl mx-2">{year}</p>
+        <img className="w-8 lg:w-11" src={Tick} alt="Tick Icon" />
+        <p className="text-white text-xl lg:text-2xl mx-2">{year}</p>
       </div>
-      <h2 className="text-xl text-white mt-2">{title}</h2>
-      <h3 className="text-md text-white">{location}</h3>
+      <h2 className="text-xl lg:text-2xl text-white mt-2">{title}</h2>
+      <h3 className="text-md lg:text-lg text-white">{location}</h3>
     </div>
   );
 
