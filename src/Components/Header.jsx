@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import logo from "../assets/img/logo.png";
+import logo from '/LOGO.png';
 import { Link as ScrollLink } from "react-scroll";
 import ThemeContext from "../Context/useTheme";
 
