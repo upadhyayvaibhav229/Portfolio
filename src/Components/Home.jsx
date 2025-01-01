@@ -38,7 +38,7 @@ const Home = () => {
 
       <div>
         <img
-          className="w-[400px] md:w-[200px] lg:w-[500px] rounded-full"
+          className="w-[400px] md:w-[200px] lg:w-[350px] rounded-full"
           src={vaibhav}
           alt="Profile Image"
         />
