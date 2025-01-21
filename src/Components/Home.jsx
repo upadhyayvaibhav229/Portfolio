@@ -1,6 +1,6 @@
 import React from "react";
 import vaibhav from "../assets/img/vaibhav.png";
-import cv from '../../public/My_cv.pdf'
+import cv from '../assets/My_cv.pdf';
 
 const Home = () => {
   return (
