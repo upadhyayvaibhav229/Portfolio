@@ -8,28 +8,28 @@ const Home = () => {
 
     <div className="container dark:text-white dark:bg-slate-900 max-w-full flex flex-wrap justify-around items-center md:min-h-screen pb-10 py-5 mt-11 ">
       <div className="p-2 pt-5 ml-4">
-        <h1 className=" text-xl md:text-xl font-bold leading-6">
+        <h1 className=" text-xl md:text-xl lg:text-3xl font-bold leading-6">
           Hello, I'm
         </h1>
-        <h1 className="text-yellow-500 text-2xl md:text-2xl font-bold">
+        <h1 className="text-yellow-500 text-2xl md:text-2xl lg:text-4xl font-bold">
           Vaibhav Upadhyay
         </h1>
-        <h1 className=" text-3xl md:text-2xl font-bold leading-7">
+        <h1 className=" text-2xl md:text-3xl lg:text-5xl font-bold leading-7">
           Full Stack Developer
         </h1>
-        <p className=" font-bold text-lg md:text-[15px] leading-8">
+        <p className=" font-bold text-md md:text-[15px] lg:text-lg leading-8">
           Lorem ipsum dolor sit amet consectetur, <br />
           adipisicing elit. Saepe, minus?
         </p>
         <div className="flex space-x-2">
-          <button className="px-4 py-2 mt-4 rounded-lg bg-yellow-300 hover:bg-yellow-400 text-sm md:text-sm font-semibold">
+          <button className="px-4 py-2 mt-4 rounded-lg bg-yellow-300 hover:bg-yellow-400 text-sm md:text-sm lg:text-lg font-semibold">
             Hire Me!
           </button>
           <a
               href={cv} 
               download="My_cv.pdf" 
             >
-              <button className="px-4 py-1 mt-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-black text-sm md:text-lg font-semibold">
+              <button className="px-4 py-2 mt-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-black text-sm md:text-sm lg:text-lg font-semibold">
                 Download CV
               </button>
             </a>
