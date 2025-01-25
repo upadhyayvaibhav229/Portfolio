@@ -1,6 +1,6 @@
 import React from "react";
 import vaibhav from "../assets/img/vaibhav.png";
-import cv from '../../public/My_cv.pdf'
+import cv from '../assets/My_cv.pdf';
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
 
     <div className="container dark:text-white dark:bg-slate-900 max-w-full flex flex-wrap justify-around items-center md:min-h-screen pb-10 py-5 mt-11 ">
       <div className="p-2 pt-5 ml-4">
+<<<<<<< HEAD
         <h1 className=" text-xl md:text-xl lg:text-2xl font-bold leading-6">
           Hello, I'm
         </h1>
@@ -18,18 +19,38 @@ const Home = () => {
           Full Stack Developer
         </h1>
         <p className=" font-bold text-lg md:text-[15px] lg:text-xl leading-8">
+=======
+        <h1 className=" text-xl md:text-xl lg:text-3xl font-bold leading-6">
+          Hello, I'm
+        </h1>
+        <h1 className="text-yellow-500 text-2xl md:text-2xl lg:text-4xl font-bold">
+          Vaibhav Upadhyay
+        </h1>
+        <h1 className=" text-2xl md:text-3xl lg:text-5xl font-bold leading-7">
+          Full Stack Developer
+        </h1>
+        <p className=" font-bold text-md md:text-[15px] lg:text-lg leading-8">
+>>>>>>> 7b3b12b9be51bd3ce8bb384b7e25355f554afc95
           Lorem ipsum dolor sit amet consectetur, <br />
           adipisicing elit. Saepe, minus?
         </p>
         <div className="flex space-x-2">
+<<<<<<< HEAD
           <button className="px-4 py-2 mt-4 rounded-lg bg-yellow-300 hover:bg-yellow-400 text-sm md:text-sm lg:text-xl font-semibold">
+=======
+          <button className="px-4 py-2 mt-4 rounded-lg bg-yellow-300 hover:bg-yellow-400 text-sm md:text-sm lg:text-lg font-semibold">
+>>>>>>> 7b3b12b9be51bd3ce8bb384b7e25355f554afc95
             Hire Me!
           </button>
           <a
               href={cv} 
               download="My_cv.pdf" 
             >
+<<<<<<< HEAD
               <button className="px-4 py-1 mt-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-black text-sm md:text-2xl lg:text-3xl font-semibold">
+=======
+              <button className="px-4 py-2 mt-4 rounded-lg bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-400 hover:text-black text-sm md:text-sm lg:text-lg font-semibold">
+>>>>>>> 7b3b12b9be51bd3ce8bb384b7e25355f554afc95
                 Download CV
               </button>
             </a>
@@ -38,7 +59,7 @@ const Home = () => {
 
       <div>
         <img
-          className="w-[400px] md:w-[200px] lg:w-[500px] rounded-full"
+          className="w-[400px] md:w-[200px] lg:w-[350px] rounded-full"
           src={vaibhav}
           alt="Profile Image"
         />

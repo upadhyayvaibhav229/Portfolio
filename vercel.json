@@ -1,8 +1,16 @@
 {
+<<<<<<< HEAD
     "rewrites": [
       {
         "source": "/:path*",
         "destination": "/index.html"
+=======
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+>>>>>>> 7b3b12b9be51bd3ce8bb384b7e25355f554afc95
       }
     ]
   }
