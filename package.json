@@ -1,6 +1,6 @@
 {
   "name": "porfolio",
-  "homepage": "https://upadhyayvaibhav229.github.io/Portfolio",
+  "homepage": "https://localhost:4000",
   "private": true,
   "version": "0.0.0",
   "type": "module",
