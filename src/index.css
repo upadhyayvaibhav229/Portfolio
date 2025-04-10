@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant light (&:where(.light, .light *)); */
+body{
+font-family: "Itim", cursive;
+}
+
