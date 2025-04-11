@@ -1,6 +1,6 @@
 import React from "react";
 import vaibhav from "../assets/img/vaibhav.png";
-import cv from '../assets/My_cv.pdf';
+import cv from "../assets/My_cv.pdf";
 
 const Home = () => {
   return (
@@ -21,7 +21,15 @@ const Home = () => {
             adipisicing elit. Saepe, minus?
           </p>
           <div className="flex space-x-2">
-            <button onClick={() => window.scrollTo({ top: document.getElementById("contacts").offsetTop, behavior: "smooth" })} className="px-4 py-2 mt-4 rounded-lg dark:bg-yellow-400 dark:text-black border-2 border-yellow-400 bg-blue-500 text-white border-none text-sm md:text-base lg:text-lg font-semibold cursor-pointer ">
+            <button
+              onClick={() =>
+                window.scrollTo({
+                  top: document.getElementById("contacts").offsetTop,
+                  behavior: "smooth",
+                })
+              }
+              className="px-4 py-2 mt-4 rounded-lg dark:bg-yellow-400 dark:text-black border-2 border-yellow-400 bg-blue-500 text-white border-none text-sm md:text-base lg:text-lg font-semibold cursor-pointer "
+            >
               Hire Me!
             </button>
             <a href={cv} download="My_cv.pdf">

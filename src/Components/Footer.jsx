@@ -1,20 +1,15 @@
 import React from "react";
-import logo from '/LOGO.png';
+import logo from "/LOGO.png";
 
 const Footer = () => {
   return (
     <footer className=" dark:bg-slate-900 dark:text-white overflow-x-hidden">
-      
       {/* Main Footer Content */}
       <div className="container max-w-full flex flex-col md:flex-row justify-around items-center border-t dark:border-gray-700 pt-8  ">
         {/* Logo and Name */}
         <div className="flex items-center space-x-2">
           <div className="w-12 h-12 rounded-full dark:bg-gray-800 flex items-center justify-center">
-            <img
-              src={logo}
-              alt="Avatar"
-              className="w-10 h-10 rounded-full"
-            />
+            <img src={logo} alt="Avatar" className="w-10 h-10 rounded-full" />
           </div>
           <span className="text-lg  font-bold text-yellow-400 ">Vaibhav</span>
         </div>
@@ -72,8 +67,9 @@ const Address = () => (
     <p className="dark:text-gray-400 px-6 text-xl font-bold">Address</p>
     <div className="flex flex-col space-y-2 dark:text-gray-300">
       <p className="flex text-wrap items-center">
-        <span className="mr-2">📍</span> wadilal, Gosalia Road, <br /> Sanjay Nagar,
-       <br /> Sundar Gali, <br /> Kandivali(West), Mumbai - 400067
+        <span className="mr-2">📍</span> wadilal, Gosalia Road, <br /> Sanjay
+        Nagar,
+        <br /> Sundar Gali, <br /> Kandivali(West), Mumbai - 400067
       </p>
       <p className="flex items-center">
         <span className="mr-2">✉️</span> upadhyayvaibhav229 <br /> @gmail.com

@@ -2,7 +2,7 @@
 
 
 @custom-variant dark (&:where(.dark, .dark *));
-/* @custom-variant light (&:where(.light, .light *)); */
+/* @cust bom-variant light (&:where(.light, .light *)); */
 body{
 font-family: "Itim", cursive;
 }
