@@ -101,8 +101,8 @@ const Header = () => {
               "home",
               "about",
               "services",
-              "skills ",
-              " projects",
+              "skills",
+              "projects",
               "contacts",
             ].map((item) => (
               <li key={item} className="w-full text-center cursor-pointer">
