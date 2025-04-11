@@ -30,7 +30,7 @@ const Header = () => {
     <header>
       <nav className="fixed top-0 shadow-lg container flex items-center justify-between p-2 bg-slate-800 max-w-full ">
         {/* Logo Section */}
-        <div className="flex items-center gap-2">
+        <div id="home" className="flex items-center gap-2">
           <img
             id="home"
             src={logo}
