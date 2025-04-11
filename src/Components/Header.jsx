@@ -37,7 +37,7 @@ const Header = () => {
             alt="Logo"
             className="w-10 h-10 rounded-full"
           />
-          <h1 className="text-yellow-500 text-xl font-mono">Vaibhav</h1>
+          <h1 className="text-yellow-500 text-xl font-mono">Vaibhav Upadhyay</h1>
         </div>
 
         {/* Desktop Navbar */}
