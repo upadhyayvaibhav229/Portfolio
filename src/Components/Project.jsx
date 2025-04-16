@@ -21,7 +21,7 @@ const project = [
   },
   {
     title: 'E-commerce UI',
-    image: img.studentPortal,
+    image: img.ecommerce,
     description: 'Frontend UI for an e-commerce platform with product grid and cart.',
     tech: ['React', 'Redux Toolkit', 'Tailwind', 'firebase'],
     github: 'https://github.com/upadhyayvaibhav229/React-ecommerce-website.git',
@@ -29,9 +29,9 @@ const project = [
   },
   {
     title: 'Student Study Portal',
-    image: img.ecommerce,
+    image: img.studentPortal,
     description: 'Frontend UI for an e-commerce platform with product grid and cart.',
-    tech: ['React', 'Redux Toolkit', 'Tailwind', 'firebase'],
+    tech: ['HTML/CSS', 'JS', 'Bootstrap', 'Django'],
     github: 'https://github.com/upadhyayvaibhav229/React-ecommerce-website.git',
     live: 'https://react-ecommerce-website-phi.vercel.app/',
   },
