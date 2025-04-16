@@ -1,98 +1,68 @@
-import React from 'react'
-import ProjectImg from "../assets/img/project-img-1.png";
-const Project = () => {
+import React, { useState } from 'react';
+import ProjectCard from './ProjectCard';
+import { img } from '../assets/img';
+
+const project = [
+  {
+    title: 'Portfolio',
+    image: img.budgetTracker,
+    description: 'Track your daily expenses with charts and categories.',
+    tech: ['React', 'Redux', 'Tailwind'],
+    github: 'https://github.com/upadhyayvaibhav229/Portfolio.git',
+    live: 'https://portfolio-upadhyayvaibhav229s-projects.vercel.app',
+  },
+  {
+    title: 'To-Do App',
+    image: img.todoApp,
+    description: 'Simple task manager with filters and localStorage.',
+    tech: ['React', 'Redux', 'CSS'],
+    github: 'https://github.com/upadhyayvaibhav229/TODO.git',
+    live: 'https://todoapp-gules-five.vercel.app/',
+  },
+  {
+    title: 'E-commerce UI',
+    image: img.studentPortal,
+    description: 'Frontend UI for an e-commerce platform with product grid and cart.',
+    tech: ['React', 'Redux Toolkit', 'Tailwind', 'firebase'],
+    github: 'https://github.com/upadhyayvaibhav229/React-ecommerce-website.git',
+    live: 'https://react-ecommerce-website-phi.vercel.app/',
+  },
+  {
+    title: 'Student Study Portal',
+    image: img.ecommerce,
+    description: 'Frontend UI for an e-commerce platform with product grid and cart.',
+    tech: ['React', 'Redux Toolkit', 'Tailwind', 'firebase'],
+    github: 'https://github.com/upadhyayvaibhav229/React-ecommerce-website.git',
+    live: 'https://react-ecommerce-website-phi.vercel.app/',
+  },
+];
+
+const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const VisibleCards = showAll ? project : project.slice(0, 3);
+
   return (
-    <section id="projects" class="w-full py-10 bg-slate-700 p-5">
-      <h1 class="text-center text-xl text-white">Latest Works</h1>
-      <h2 class="text-center text-2xl text-white">
-        Explore My Popular Projects
-      </h2>
-      <div class="container mx-auto flex flex-col md:flex-row items-center justify-center md:justify-around gap-8 mt-4">
-        {/* <!-- Left: Image Section --> */}
-        <div class="w-full mt-4 md:w-1/2 flex justify-center">
-          <img
-            src={ProjectImg}
-            alt="Project Showcase"
-            class="w-[500px] rounded-lg shadow-lg"
-          />
-        </div>
-        {/* <!-- Right: Content Section --> */}
-        <div class="w-full md:w-1/3 text-left mt-5 ml-4 md:ml-0">
-          <h4 class="text-yellow-500 md:text-sm text-md font-bold mb-2 ml-4">
-            Website Design
-          </h4>
-          <h2 class="text-white text-3xl font-bold mb-4">My Portfolio</h2>
-          <p class="text-gray-300 leading-relaxed mb-6">
-            Hello! This is my personal portfolio website built using HTML,
-            TailwindCSS, jQuery, JavaScript. This portfolio is fully responsive
-            across all devices.
-          </p>
-           <a
-            href="#"
-            class="inline-flex items-center text-yellow-500 font-bold "
-          >
-            <span>View Project</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ml-2 "
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a> 
-        </div>
+    <section className="py-10 px-4 dark:bg-gray-900 text-white" id="projects">
+      <h2 className="text-3xl font-bold text-center mb-8 dark:text-white text-black">Projects</h2>
+      <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {VisibleCards.map((project, index) => (
+          <ProjectCard key={index} {...project} />
+        ))}
       </div>
-      <div class="container mx-auto flex flex-col md:flex-row-reverse items-center justify-center md:justify-around gap-8 mt-4">
-        {/* <!-- Left: Image Section --> */}
-        <div class="w-full mt-4 md:w-1/2 flex justify-center">
-          <img
-            src={ProjectImg}
-            alt="Project Showcase"
-            class="w-[500px] rounded-lg shadow-lg"
-          />
-        </div>
-        {/* <!-- Right: Content Section --> */}
-        <div class="w-full md:w-1/3 text-left mt-5 ml-4 md:ml-0">
-          <h4 class="text-yellow-500 md:text-sm text-md font-bold mb-2 ml-4">
-            Website Design
-          </h4>
-          <h2 class="text-white text-3xl font-bold mb-4">My Portfolio</h2>
-          <p class="text-gray-300 leading-relaxed mb-6">
-            Hello! This is my personal portfolio website built using HTML,
-            TailwindCSS, jQuery, JavaScript. This portfolio is fully responsive
-            across all devices.
-          </p>
-           <a
-            href="#"
-            class="inline-flex items-center text-yellow-500 font-bold "
+
+      {project.length > 3 && (
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
           >
-            <span>View Project</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ml-2 "
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </a> 
+            {showAll ? 'Show Less ▲' : 'Read More ▼'}
+          </button>
         </div>
-      </div>
+      )}
     </section>
   );
-}
+};
 
-export default Project
+export default Projects;
