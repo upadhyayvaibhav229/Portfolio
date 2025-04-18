@@ -1,6 +1,6 @@
 import React from "react";
-import about from '../assets/img/img.png'
-import Tick from '../assets/img/tick.png'
+import about from "../assets/img/img.png";
+import Tick from "../assets/img/tick.png";
 import Edu from "../assets/img/education (1).png";
 const AboutMe = () => {
   const EducationCard = ({ year, title, location }) => (
@@ -78,40 +78,71 @@ const AboutMe = () => {
       </div>
 
       {/* Experience and Education Section */}
-      <div className="flex flex-col items-center dark:bg-slate-900 py-10">
-        <div className="w-full h-auto p-4 flex flex-wrap justify-around">
-          <div className="mt-10 w-[200px]">
-            <img src={Edu} alt="Education Icon" />
-          </div>
-          <div className="flex flex-col gap-5">
-            <h1 className="text-center text-2xl font-bold dark:text-white">
-              My <span className="text-yellow-500">Experience</span> & Education
-            </h1>
+      <div className="bg-slate-100 dark:bg-slate-900 py-16 px-6">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-14 dark:text-white">
+          My <span className="text-yellow-500">Experience</span> & Education
+        </h1>
 
-            {/* Education Section */}
-            <div className="">
-              <h2 className="text-yellow-500 text-2xl text-center font-bold p-2">
-                My Education
-              </h2>
-              <div className="flex flex-wrap gap-4 md:justify-around mt-4">
-                {/* Current Course */}
-                <EducationCard
-                  year="2024 - Present"
-                  title="Full Stack Development Course"
-                  location="Andheri"
-                />
-                {/* Bachelor's Degree */}
-                <EducationCard
-                  year="2019 - 2023"
-                  title="Bachelor's Degree in Computer Science"
-                  location="T.P. Bhatia College of Science and Commerce"
-                />
-                {/* High School */}
-                <EducationCard
-                  year="2015 - 2017"
-                  title="High School Diploma"
-                  location="Sardar Vallabhbhai Patel"
-                />
+        <div className="max-w-4xl mx-auto space-y-20 flex flex-col md:flex-row justify-between items-center">
+          {/* Experience Section */}
+          {/* <div>
+      <h2 className="text-2xl text-center font-semibold text-yellow-500 mb-8">Experience</h2>
+      <div className="space-y-6 border-l-4 border-yellow-500 pl-6">
+        <div>
+          <p className="text-sm text-gray-500 dark:text-gray-400">2024 - Present</p>
+          <h3 className="text-lg font-semibold dark:text-white">Node.js Developer Intern</h3>
+          <p className="text-gray-700 dark:text-gray-300">XYZ Tech Pvt Ltd</p>
+        </div>
+
+        <div>
+          <p className="text-sm text-gray-500 dark:text-gray-400">2023</p>
+          <h3 className="text-lg font-semibold dark:text-white">Freelance Projects</h3>
+          <p className="text-gray-700 dark:text-gray-300">Remote</p>
+        </div>
+      </div>
+    </div> */}
+
+          {/* Education Section */}
+          <div>
+            <h2 className="text-2xl text-center font-semibold text-yellow-500 mb-8">
+              Education
+            </h2>
+            <div className="space-y-6">
+              {/* Full Stack Development Course */}
+              <div className="border-l-4 border-red-500 pl-6">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  2024 - Present
+                </p>
+                <h3 className="text-lg font-semibold dark:text-white">
+                  Full Stack Development Course
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300">Andheri</p>
+              </div>
+
+              {/* Bachelor's Degree */}
+              <div className="border-l-4 border-blue-500 pl-6">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  2020 - 2023
+                </p>
+                <h3 className="text-lg font-semibold dark:text-white">
+                  Bachelor's in Information Technology
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300">
+                  Smt. K. G Mittal College
+                </p>
+              </div>
+
+              {/* High School */}
+              <div className="border-l-4 border-green-500 pl-6">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  2015 - 2017
+                </p>
+                <h3 className="text-lg font-semibold dark:text-white">
+                  High School
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300">
+                  Sardar Vallabhbhai Patel
+                </p>
               </div>
             </div>
           </div>
@@ -120,6 +151,5 @@ const AboutMe = () => {
     </section>
   );
 };
-
 
 export default AboutMe;
