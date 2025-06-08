@@ -27,11 +27,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacts">
+    <section id="contacts" className="">
       {/* Container */}
       <div className="dark:bg-gray-900 dark:text-white py-10 px-6 md:px-16 p-10">
+        <h1 className="dark:text-white text-center text-4xl mt-10 mb-7">Contact <span className="text-yellow-500">US</span> </h1>
+        <hr  className=""/>
         {/* Contact Header */}
-        <div className="flex flex-col md:flex-row md:justify-between mb-8">
+        <div className="flex flex-col md:flex-row md:justify-between mb-8 mt-10">
           {/* Left Section */}
           <div className="mb-8 md:mb-0 md:w-1/2">
             <h2 className="text-xl font-bold mb-2 dark:text-white">Get in Touch</h2>
