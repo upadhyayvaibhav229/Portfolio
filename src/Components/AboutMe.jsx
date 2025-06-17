@@ -11,7 +11,7 @@ const AboutMe = () => {
           I'm Vaibhav Upadhyay, a passionate MERN Stack Developer crafting scalable web applications with clean code and creative solutions. Currently based in the vibrant city of Kandivali, Mumbai, I work with clients across the globe and am always ready to take on new challenges in the world of full-stack development.
         </p>
       </div>
-      <div className=''>
+      <div className='min-w-6xl'>
           <SingleTabs/> 
       </div>
     </div>
