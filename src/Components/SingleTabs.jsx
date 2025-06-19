@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { img } from '../assets/img'; // Adjust the import path as necessary
+import SkillProgressCircle from './SkillProgressCircle';
+import { sub } from 'framer-motion/client';
 const SingleTabs = () => {
     const [activeTab, setActiveTab] = useState('about');
+    const [activeSkillTab, setActiveSkillTab] = useState('Frontend Skills');
+
 
     const Info = {
         about: {
@@ -24,29 +28,47 @@ const SingleTabs = () => {
             desc: 'Explore my academic background, which laid the foundation for my technical journey.\nFrom school to graduation, every step contributed to my growth and skills.\nI believe learning never stops, and I continue to build on this base every day.',
             academicHistory: [
                 {
-                    level: 'SSC',
-                    institute: 'ABC High School, Mumbai',
-                    year: '2018'
+
+                    level: 'Graduation - B.Sc IT',
+                    institute: 'Smt. K. G Mittal College, Mumbai',
+                    year: '2024'
+                },
+                {
+                    level: 'MERN stack development Certification',
+                    institute: 'Nettech India',
+                    year: '2024 - 2025'
                 },
                 {
                     level: 'HSC',
-                    institute: 'XYZ Junior College, Mumbai',
-                    year: '2020'
+                    institute: 'T. P Bhatia College of Science, Mumbai',
+                    year: '2021 - 2023'
                 },
                 {
-                    level: 'Graduation',
-                    degree: 'B.Sc in Information Technology and Engineering',
-                    institute: 'XYZ College, Mumbai',
-                    year: '2024'
-                }
+                    level: 'SSC',
+                    institute: 'Sardar Vallabbhia Patel, Mumbai',
+                    year: '2020'
+                },
             ]
         }
         ,
         skills: {
             title: 'My Skills',
             img: img.programmer_gif,
-            desc: 'Here you’ll find the tools and technologies I work with confidently.\n From frontend frameworks to backend development, I enjoy crafting complete solutions.\n I’m always open to learning new skills to stay updated in this fast-paced tech world.',
-        },
+            desc: 'Here you’ll find the tools and technologies I work with confidently.\n From frontend frameworks to backend development...',
+            frontend: [
+                { name: 'HTML', percent: 90 },
+                { name: 'CSS', percent: 85 },
+                { name: 'JavaScript', percent: 80 },
+                { name: 'React', percent: 75 },
+                { name: 'Tailwind CSS', percent: 70 },
+            ],
+            backend: [
+                { name: 'Node.js', percent: 80 },
+                { name: 'Express.js', percent: 75 },
+                { name: 'MongoDB', percent: 70 },
+            ]
+        }
+
     };
 
     const tabs = [
@@ -55,6 +77,18 @@ const SingleTabs = () => {
         { key: 'education', label: 'Education' },
         { key: 'skills', label: 'Skills' },
     ];
+
+    const subtabs = [
+        {
+            key: 'Frontend Skills',
+            'label': 'Frontend Skills'
+        },
+        {
+            key: 'Backend Skills',
+            'label': 'Backend Skills'
+
+        }
+    ]
 
     return (
         <div className='container min-w-2/3 mt-10 flex flex-col justify-center items-center'>
@@ -151,24 +185,55 @@ const SingleTabs = () => {
                         <div className='space-y-4'>
                             {
                                 Info.education.academicHistory.map((item, index) => (
-                                    <div key={index} className='border-t border-t-green-600 flex flex-col'>
-                                        <div className='flex justify-between text-white'>
+                                    <div key={index} className='border-t border-t-green-500 hover:border-t-yellow-500 flex flex-col'>
+                                        <div className='grid grid-cols-2 mt-4 text-white'>
 
-                                        <div>
+                                            <div>
 
-                                        <h1>{item.level}</h1>
-                                        </div>
-                                        <div>
+                                                <p className='text-yellow-500'>{item.year}</p>
+                                            </div>
+                                            <div className='space-y-3'>
 
-                                        <p>{item.institute}</p>
-                                        <p>{item.year}</p>
-                                        </div>
+                                                <p className='text-xl'>{item.institute}</p>
+                                                <h1 className='text-[#999999]'>{item.level}</h1>
+                                            </div>
                                         </div>
                                     </div>
                                 ))
                             }
                         </div>
                     )}
+                    {activeTab === 'skills' && (
+                        <>
+                            <ul className='flex gap-4 list-none mb-8 flex-wrap justify-center'>
+                                {subtabs.map((tab) => (
+                                    <li key={tab.key}>
+                                        <button
+                                            className={`text-white rounded-2xl text-sm md:text-base px-5 py-2 uppercase transition-all duration-300 ${activeSkillTab === tab.key ? 'bg-green-500' : 'bg-slate-500 hover:bg-slate-600'}`}
+                                            onClick={() => setActiveSkillTab(tab.key)}
+                                        >
+                                            {tab.label}
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+
+                            <div className="w-full text-white grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                                {(activeSkillTab === 'Frontend Skills'
+                                    ? Info.skills.frontend
+                                    : Info.skills.backend
+                                ).map((skill, index) => (
+                                    <SkillProgressCircle
+                                        key={index}
+                                        name={skill.name}
+                                        percent={skill.percent}
+                                    />
+                                ))}
+                            </div>
+                        </>
+                    )}
+
+
                 </div>
 
             </div>
