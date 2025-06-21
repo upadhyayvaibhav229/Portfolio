@@ -47,7 +47,6 @@ const Header = () => {
               "home",
               "about",
               "services",
-              "skills",
               "projects",
               "contacts",
             ].map((item) => (

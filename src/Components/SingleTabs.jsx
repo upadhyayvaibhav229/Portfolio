@@ -91,12 +91,12 @@ const SingleTabs = () => {
     ]
 
     return (
-        <div className='container min-w-2/3 mt-10 flex flex-col justify-center items-center'>
+        <div className='container mt-10 flex flex-col md:justify-center md:items-center overflow-hidden '>
             <ul className='flex gap-4 list-none mb-8 flex-wrap justify-center'>
                 {tabs.map((tab) => (
-                    <li key={tab.key}>
+                    <li key={tab.key} className=''>
                         <button
-                            className={`text-white rounded-2xl text-lg px-6 py-3 uppercase transition-all duration-300 ${activeTab === tab.key ? 'bg-green-500' : 'bg-slate-500 hover:bg-slate-600'
+                            className={`text-white rounded-2xl text-lg md:px-4 md:py-2 px-3 py-1 uppercase transition-all duration-300 ${activeTab === tab.key ? 'bg-green-500' : 'bg-slate-500 hover:bg-slate-600'
                                 }`}
                             onClick={() => setActiveTab(tab.key)}
                         >
@@ -106,18 +106,18 @@ const SingleTabs = () => {
                 ))}
             </ul>
 
-            <div className='tab-content p-5 border rounded-xl w-full max-w-7xl shadow-md bg-[#141410] grid grid-cols-1 md:grid-cols-2 gap-6 items-start'>
+            <div className='tab-content p-5 border rounded-xl w-full md:max-w-7xl  max-w-full shadow-md bg-[#141410] grid grid-cols-1 md:grid-cols-2 gap-6 items-start'>
                 <div>
 
-                    <img src={Info.about.img} alt="Personal Info" className='w-auto h-auto rounded-full mb-4' />
+                    <img src={Info.about.img} alt="Personal Info" className='md:w-auto md:h-auto w-[350px] rounded-full mb-4' />
                 </div>
                 <div>
 
                     <h2 className='text-3xl font-bold mb-4 text-white uppercase'>{Info[activeTab].title}</h2>
                     <p className='text-[#999999] mb-4'>{Info[activeTab].desc}</p>
                     {activeTab === 'about' && (
-                        <div className='text-left space-y-2 grid grid-cols-2 gap-2'>
-                            <div className="bg-[#1D1D1D]  flex flex-col justify-center gap-5 py-5 px-5 rounded-lg shadow-md border hover:border-green-500">
+                        <div className='text-left space-y-2 grid grid-cols-1 md:grid-cols-2 gap-2'>
+                            <div className="bg-[#1D1D1D]  flex flex-col flex-wrap md:flex-nowrap justify-center gap-5 py-5 px-5 rounded-lg shadow-md border hover:border-green-500">
 
                                 <strong className='text-xl text-[#999999]'>Email</strong>
                                 <p className='text-white text-lg'>
@@ -205,11 +205,11 @@ const SingleTabs = () => {
                     )}
                     {activeTab === 'skills' && (
                         <>
-                            <ul className='flex gap-4 list-none mb-8 flex-wrap justify-center'>
+                            <ul className='flex  gap-4 list-none mb-8 flex-wrap md:justify-center'>
                                 {subtabs.map((tab) => (
                                     <li key={tab.key}>
                                         <button
-                                            className={`text-white rounded-2xl text-sm md:text-base px-5 py-2 uppercase transition-all duration-300 ${activeSkillTab === tab.key ? 'bg-green-500' : 'bg-slate-500 hover:bg-slate-600'}`}
+                                            className={`text-white rounded-2xl text-sm md:text-base md:px-5 md:py-2 px-3 py-2 uppercase transition-all duration-300 ${activeSkillTab === tab.key ? 'bg-green-500' : 'bg-slate-500 hover:bg-slate-600'}`}
                                             onClick={() => setActiveSkillTab(tab.key)}
                                         >
                                             {tab.label}

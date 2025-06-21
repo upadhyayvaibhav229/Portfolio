@@ -9,10 +9,9 @@ import Contact from './Components/Contact'
 
 import viteLogo from '/vite.svg'
 import Footer from './Components/Footer'
-import Skills from './Components/Skills'
 import ThemeContextProvider from './Context/ThemeContextProvider'
 
-
+ 
 function App() {
 
   return (
@@ -22,7 +21,6 @@ function App() {
 
       <AboutMe />
       <Service />
-      <Skills/>
       <Project />
       <Contact />
       <Footer/>

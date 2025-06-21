@@ -73,9 +73,9 @@ const Service = () => {
 };
 
 const ServiceCard = ({ id, title, description, icon }) => (
-  <div className="flex items-center justify-between bg-zinc-800 rounded-2xl p-4 shadow-lg">
+  <div className="flex items-center justify-between bg-zinc-800 rounded-2xl mt-10 p-4 shadow-lg">
     <div>
-      <h2 className="text-black font-bold text-lg">
+      <h2 className="text-white font-bold text-lg">
         {id < 10 ? `0${id}` : id}.{" "}
         <span className="text-yellow-500">{title}</span>
       </h2>
