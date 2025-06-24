@@ -1,15 +1,16 @@
 
 import reactLogo from './assets/react.svg'
 import Header from './Components/Header'
-import Home from './Components/Home'
-import AboutMe from './Components/AboutMe'
-import Service from './Components/Service'
-import Project from './Components/Project'
-import Contact from './Components/Contact'
+
 
 import viteLogo from '/vite.svg'
 import Footer from './Components/Footer'
 import ThemeContextProvider from './Context/ThemeContextProvider'
+import Home from './Pages/Home'
+import AboutMe from './Pages/AboutMe'
+import Service from './Pages/Service'
+import Projects from './Pages/Project'
+import Contact from './Pages/Contact'
 
  
 function App() {
@@ -21,7 +22,7 @@ function App() {
 
       <AboutMe />
       <Service />
-      <Project />
+      <Projects />
       <Contact />
       <Footer/>
     </ThemeContextProvider>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { img } from '../assets/img'
-import SingleTabs from './SingleTabs'
+import SingleTabs from '../Components/SingleTabs'
 import { hr } from 'framer-motion/client'
 
 const AboutMe = () => {
