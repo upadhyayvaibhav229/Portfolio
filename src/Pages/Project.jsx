@@ -38,7 +38,7 @@ const project = [
     title: "Doctor Appointment Site (🚧 Work in Progress)",
     stack: "Full Stack",
     projectStatus: "In Progress",
-    image: img.ecommerce,
+    image: img.doctor,
     description: "A doctor appointment booking platform with admin panel and image upload features.",
     tech: ["MERN", "Tailwind CSS"],
     github: "https://github.com/upadhyayvaibhav229/React-ecommerce-website.git",
@@ -52,7 +52,7 @@ const project = [
   },
   {
     title: "Student Study Portal",
-    stack: "Frontend",
+    stack: "Full Stack",
     projectStatus: "Completed",
     image: img.studentPortal,
     description: "Educational dashboard with basic UI built using HTML/CSS and Django.",
