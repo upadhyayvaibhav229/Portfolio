@@ -11,6 +11,7 @@ import AboutMe from './Pages/AboutMe'
 import Service from './Pages/Service'
 import Projects from './Pages/Project'
 import Contact from './Pages/Contact'
+import { ToastContainer } from 'react-toastify'
 
  
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <Service />
       <Projects />
       <Contact />
+      <ToastContainer />
       <Footer/>
     </ThemeContextProvider>
   );
