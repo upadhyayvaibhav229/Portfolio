@@ -78,7 +78,7 @@ const Projects = () => {
 
   return (
     <section className="py-10 px-4 dark:bg-gray-900 text-white" id="projects">
-      <h2 className="text-3xl font-bold text-center mb-8 text-white">Projects</h2>
+      <h2 className="text-3xl font-bold text-center mb-8 dark:text-white text-black">Projects</h2>
 
       {/* Tech Stack Tabs */}
       <div className="flex gap-4 justify-center mb-4 flex-wrap">

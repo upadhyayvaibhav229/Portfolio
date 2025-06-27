@@ -91,7 +91,7 @@ const SingleTabs = () => {
     ]
 
     return (
-        <div className='container mt-10 flex flex-col md:justify-center md:items-center overflow-hidden '>
+        <div className='container mt-10 flex flex-col md:justify-center md:items-center overflow-hidden mx-auto'>
             <ul className='flex gap-4 list-none mb-8 flex-wrap justify-center'>
                 {tabs.map((tab) => (
                     <li key={tab.key} className=''>
