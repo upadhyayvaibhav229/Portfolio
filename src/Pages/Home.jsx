@@ -20,7 +20,7 @@ const Home = () => {
           <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold">
             Full <span className="text-yellow-500">MERN</span> Stack <br /> Developer
           </h3>
-          <p className="font-medium text-md md:text-lg lg:text-xl text-gray-300">
+          <p className="font-medium text-md md:text-lg lg:text-xl text-gray-500">
             Passionate about building responsive <br /> web applications and solving real-world <br />problems with clean and efficient code.
           </p>
 
