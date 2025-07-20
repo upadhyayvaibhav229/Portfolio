@@ -50,8 +50,8 @@ const HandleSubmit = (e) => {
   };
 
   return (
-    <section id="contacts">
-      <div className="dark:bg-gray-900 dark:text-white py-10 px-6 md:px-16 p-10">
+    <section id="contacts" className="dark:bg-gray-900 dark:text-white py-10 px-6 md:px-16 p-10">
+      <div className="max-w-screen-xl mx-auto">
         <h1 className="text-center text-4xl mt-10 mb-7 dark:text-white">
           Contact <span className="text-yellow-500">US</span>
         </h1>

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className=" dark:bg-slate-900 dark:text-white overflow-x-hidden">
       {/* Main Footer Content */}
-      <div className="container max-w-full flex flex-col md:flex-row justify-around items-center border-t dark:border-gray-700 pt-8  ">
+      <div className="container max-w-screen-xl mx-auto flex flex-col md:flex-row justify-around items-center border-t dark:border-gray-700 pt-8  ">
         {/* Logo and Name */}
         <div className="flex items-center space-x-2">
           <div className="w-12 h-12 rounded-full dark:bg-gray-800 flex items-center justify-center">
@@ -46,16 +46,16 @@ const Footer = () => {
         <Address />
       </div>
       {/* Footer Bottom */}
-      <div className="flex justify-between py-5 px-5 font-light items-center bg-slate-700 w-full">
+      <div className="flex justify-between py-5 px-5 font-light items-center bg-slate-700 w-full ">
         {/* Copywrite Text */}
-        <div>
+        <div className="max-w-screen-xl mx-auto">
           <p className="text-sm text-white text-center mt-5">
             Copywrite © 2024, Vaibhav. All rights reserved.
           </p>
         </div>
 
         {/* Social Links */}
-        <SocialLinks />
+        {/* <SocialLinks /> */}
       </div>
     </footer>
   );
